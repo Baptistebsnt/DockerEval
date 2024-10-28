@@ -1,7 +1,7 @@
 version: "3"
 services:
   app:
-    image: my-next-app
+    image: my-app
     build:
       context: .
     ports:

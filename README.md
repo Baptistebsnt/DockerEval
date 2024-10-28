@@ -15,14 +15,14 @@ cd ton-repo
    Pour construire l'image Docker de l'application, exécutez la commande suivante à la racine du projet (là où se trouve le Dockerfile) :
 
 bash
-docker build -t my-next-app .
+docker build -t my-app .
 Cette commande va créer une image Docker à partir des instructions dans le Dockerfile.
 
 2. Exécuter le conteneur
    Une fois l'image construite, vous pouvez lancer un conteneur basé sur cette image. Exécutez la commande suivante :
 
 bash
-docker run -d -p 3000:3000 my-next-app
+docker run -d -p 3000:3000 my-app
 Explications :
 
 -d : Lance le conteneur en mode détaché (en arrière-plan).
@@ -37,7 +37,7 @@ Vous devriez voir la page d'accueil de l'application Next.js.
 
 bash
 docker ps
-Cela vous montrera une liste des conteneurs en cours d'exécution, y compris celui basé sur my-next-app.
+Cela vous montrera une liste des conteneurs en cours d'exécution, y compris celui basé sur my-app.
 
 5. Arrêter le conteneur
    Si vous souhaitez arrêter le conteneur, utilisez la commande suivante pour identifier l'ID du conteneur :
@@ -54,11 +54,11 @@ Voici un récapitulatif des commandes Docker que vous devrez utiliser pour exéc
 Construire l'image :
 
 bash
-docker build -t my-next-app .
+docker build -t my-app .
 Lancer le conteneur :
 
 bash
-docker run -d -p 3000:3000 my-next-app
+docker run -d -p 3000:3000 my-app
 Vérifier que le conteneur est actif :
 
 bash
@@ -71,5 +71,5 @@ Notes
 Vous pouvez ajuster le port si 3000 est déjà utilisé sur votre machine. Par exemple, pour utiliser le port 4000, exécutez la commande :
 
 bash
-docker run -d -p 4000:3000 my-next-app
+docker run -d -p 4000:3000 my-app
 Ensuite, accédez à l'application via http://localhost:4000.
